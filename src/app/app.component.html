@@ -1,8 +1,16 @@
 <app-top-bar></app-top-bar>
 
+	<h1>Angular Router</h1>
+	<nav>
+		<a routerLink="./" routerLinkActive="active">Products</a><br/>
+		<a routerLink="/table-basic-example" routerLinkActive="active">a Table</a>
+	</nav>
+
 <div class="container">
-  <router-outlet></router-outlet>
+	<router-outlet></router-outlet>
 </div>
+
+<table-basic-example></table-basic-example>
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
