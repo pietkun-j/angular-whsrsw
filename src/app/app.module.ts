@@ -8,7 +8,7 @@ import { CdkTableModule } from "@angular/cdk/table";
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
 import { ProductListComponent } from "./product-list/product-list.component";
-//import { TableBasicExample } from "./table-basic-example/table-basic-example.component";
+import { TableBasicExample } from "./table-basic-example/table-basic-example.component";
 
 @NgModule({
   imports: [
@@ -16,15 +16,15 @@ import { ProductListComponent } from "./product-list/product-list.component";
     ReactiveFormsModule,
     MatTableModule,
     RouterModule.forRoot([
-      { path: "", component: ProductListComponent }
-      //{ path: "./table-basic-example", component: TableBasicExample },
+      { path: "", component: ProductListComponent },
+      //{ path: "table-basic-example", component: TableBasicExample },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
-    //TableBasicExample
+    ProductListComponent,
+    TableBasicExample
   ],
   bootstrap: [AppComponent]
 })
