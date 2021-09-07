@@ -4,6 +4,7 @@ import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatTableModule } from "@angular/material/table";
 import { CdkTableModule } from "@angular/cdk/table";
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
@@ -12,6 +13,7 @@ import { TableBasicExample } from "./table-basic-example/table-basic-example.com
 
 @NgModule({
   imports: [
+    HttpClientModule,
     BrowserModule,
     ReactiveFormsModule,
     MatTableModule,
