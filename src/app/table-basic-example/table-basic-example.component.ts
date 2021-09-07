@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export interface PeriodicElement {
   name: string;
@@ -35,12 +35,19 @@ export class TableBasicExample implements OnInit {
 
   constructor(private http: HttpClient) {}
 
+  options = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json'
+    }),
+    observe: 'body' as const,
+    responseType: 'text' as const
+  }
+
   ngOnInit() {
     this.http
-      .get('https://techport.nasa.gov/api/projects/91744')
-      .subscribe(data => {
-        //this.customerArray = data;
-        console.log(data);
-      });
+      .get('http://techport.nasa.gov/api/projects/91744', this.options)
+      .subscribe(data => 
+        console.log(JSON.stringify(data))
+      );
   }
 }
